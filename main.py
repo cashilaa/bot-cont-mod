@@ -59,11 +59,15 @@ with tab2:
     if st.button("Moderate Content"):
         if user_content:
             with st.spinner("Moderating content..."):
-                moderation_result = moderate_content(user_content, st.session_state)
-            st.subheader("Moderation Result:")
-            st.write(moderation_result)
-            st.session_state.history.append(("Moderated", user_content, moderation_result))
-            st.info("Content moderated. Check the results above.")
+                try:
+                    moderation_result = moderate_content(user_content, st.session_state)
+                    st.subheader("Moderation Result:")
+                    st.write(moderation_result)
+                    st.session_state.history.append(("Moderated", user_content, moderation_result))
+                    st.info("Content moderated. Check the results above.")
+                except ValueError:
+                    st.warning("The content could not be moderated due to safety concerns or potential bias. Please review and adjust your content.")
+                    st.session_state.history.append(("Moderation Blocked", user_content, "Content blocked due to safety concerns or potential bias."))
         else:
             st.warning("Please enter content to moderate.")
 
