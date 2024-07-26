@@ -1,0 +1,99 @@
+body {
+    background-color: #e6eef7;
+    color: #1a1a1a;
+    font-family: 'Arial', sans-serif;
+}
+
+.stApp {
+    background-color: #f7f9fc;
+}
+
+.stButton>button {
+    background-color: #1e3a5f;
+    color: #f7f9fc;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #2c5282;
+}
+
+.stTextInput>div>div>input {
+    background-color: #f7f9fc;
+    border: 1px solid #1e3a5f;
+    border-radius: 5px;
+}
+
+h1, h2, h3 {
+    color: #1e3a5f;
+}
+
+.stTab {
+    background-color: #d1e0f0;
+    color: #1e3a5f;
+    border-radius: 5px 5px 0 0;
+}
+
+.stTab[data-baseweb="tab-list"] {
+    gap: 10px;
+}
+
+.stTab[aria-selected="true"] {
+    background-color: #1e3a5f;
+    color: #f7f9fc;
+}
+
+.stTextArea>div>div>textarea {
+    background-color: #f7f9fc;
+    border: 1px solid #1e3a5f;
+    border-radius: 5px;
+}
+
+.sidebar .stSelectbox>div>div>div {
+    background-color: #f7f9fc;
+    border: 1px solid #1e3a5f;
+    border-radius: 5px;
+}
+
+/* New styles for enhanced UI */
+.stExpander {
+    background-color: #e6eef7;
+    border: 1px solid #1e3a5f;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.stExpander > div:first-child {
+    background-color: #1e3a5f;
+    color: #f7f9fc;
+    font-weight: bold;
+}
+
+.stSuccess {
+    background-color: #c3e6cb;
+    color: #0e4429;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #95d0a8;
+}
+
+.stInfo {
+    background-color: #b8daff;
+    color: #00326e;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8bc4ff;
+}
+
+.stWarning {
+    background-color: #ffeeba;
+    color: #6d5200;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffd97a;
+}
