@@ -16,6 +16,8 @@ load_css("styles.css")
 # Initialize session state
 initialize_session_state()
 
+if st.button('Back to Sentient Social Media'):
+    st.markdown("[Sentient Social](https://sentient-social.onrender.com)")
 # Main app layout
 st.title("AI Content Manager")
 st.subheader("Generate and Moderate Content with AI")
