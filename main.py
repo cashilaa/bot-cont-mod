@@ -17,7 +17,16 @@ load_css("styles.css")
 initialize_session_state()
 
 if st.button('Back to Sentient Social Media'):
-    st.markdown("[Sentient Social](https://sentient-social.onrender.com)")
+    st.experimental_set_query_params(
+        redirect='https://sentient-social.onrender.com'
+    )
+    st.experimental_rerun()
+
+# Add this at the start of your app
+redirect = st.experimental_get_query_params().get('redirect')
+if redirect:
+    st.write(f'<meta http-equiv="refresh" content="0; url={redirect[0]}">', unsafe_allow_html=True)
+    st.stop()
 # Main app layout
 st.title("AI Content Manager")
 st.subheader("Generate and Moderate Content with AI")
